@@ -5,119 +5,97 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<!doctype html>
-<html lang="nl">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-	@keyframes fade-in {
-	  from {
-	    opacity: 0;
-	    transform: translateY(20px);
-	  }
-	  to {
-	    opacity: 1;
-	    transform: translateY(0);
-	  }
-	}
-	
-	.animate-fade-in {
-	  animation: fade-in 0.8s ease-out both;
-	}
-    </style>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CobaltHosting</title>
+</head>
+<body>
+   <?php include 'header.html'; ?>
+  <hr>
+  <?php include 'second.html'; ?>
+  <hr>
+  <?php include 'packge.html'; ?>
+  <hr>
+  <?php include 'dit-krijgg-jee-er-altijd-bij.html'; ?>
 
-  <body class="bg-gray-950 text-white">
-    <Header />
+  <style>
+    body {
+      margin: 0;
+      background: #097925;
+	  background: radial-gradient(circle, rgba(9, 121, 37, 1) 3%, rgba(10, 10, 10, 1) 100%);
+      color: #fffff;
+      font-family: 'Courier New', monospace;
+background: radial-gradient(circle at center, #050505 0%, #000000 100%);
+    }
 
-    <main>
-      <!-- Hero -->
-      <section class="h-screen flex items-center justify-center text-center px-6 bg-gradient-to-b from-gray-900 to-gray-950">
-        <div class="max-w-3xl mx-auto">
-          <h1 class="text-4xl md:text-6xl font-extrabold text-cyan-400 drop-shadow mb-4 animate-fade-in">
-            Welkom bij <span class="text-cyan-300">CobaltHosting</span>
-          </h1>
-          <p class="text-lg text-gray-300">
-            Krachtige en betaalbare hosting voor al jouw projecten. Van Minecraft tot Web.
-          </p>
-          <a
-            href="#pricing"
-            class="mt-6 inline-block bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-full font-semibold transition"
-          >
-            Bekijk Pakketten
-          </a>
-        </div>
-      </section>
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      opacity: 0.2;
+      pointer-events: none;
+    }
 
-      <!-- Diensten -->
-      <section id="services" class="text-center px-6 py-24 bg-gray-900">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-6">Onze Diensten</h2>
-          <p class="text-gray-300 mb-8">
-            Wij bieden krachtige hostingdiensten zoals Webhosting, Minecraft Servers, VPS en meer.
-          </p>
-          <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
-              <h3 class="text-xl font-semibold text-cyan-300 mb-2">Webhosting</h3>
-              <p class="text-gray-400">Snelle en veilige hosting voor jouw website.</p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
-              <h3 class="text-xl font-semibold text-cyan-300 mb-2">Minecraft Servers</h3>
-              <p class="text-gray-400">Lag-vrije servers, ideaal voor communities en creators.</p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
-              <h3 class="text-xl font-semibold text-cyan-300 mb-2">VPS Hosting</h3>
-              <p class="text-gray-400">Volledige controle en prestaties op maat.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    .content {
+      position: relative;
+      z-index: 10;
+      padding: 2rem;
+    }
+  </style>
 
-      <!-- Pakketten -->
-      <section id="pricing" class="text-center px-6 py-24 bg-gradient-to-b from-gray-950 to-gray-900">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-6">Pakketprijzen</h2>
-          <p class="text-gray-300 mb-8">Flexibele pakketten voor elk type gebruiker en elk project.</p>
-          <!-- Pricing cards kunnen hier dynamisch toegevoegd worden -->
-          <div class="flex flex-col md:flex-row gap-8 justify-center">
-            <div class="bg-gray-800 p-6 rounded-xl w-full md:w-1/3 shadow hover:shadow-xl transition">
-              <h3 class="text-xl font-semibold text-cyan-300 mb-2">Starter</h3>
-              <p class="text-gray-400 mb-4">Perfect voor kleine projecten.</p>
-              <span class="text-2xl font-bold text-white">€2,99/mnd</span>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl w-full md:w-1/3 shadow-lg ring-2 ring-cyan-500">
-              <h3 class="text-xl font-semibold text-cyan-300 mb-2">Pro</h3>
-              <p class="text-gray-400 mb-4">Voor actieve websites en creators.</p>
-              <span class="text-2xl font-bold text-white">€5,99/mnd</span>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl w-full md:w-1/3 shadow hover:shadow-xl transition">
-              <h3 class="text-xl font-semibold text-cyan-300 mb-2">Enterprise</h3>
-              <p class="text-gray-400 mb-4">Volledige kracht en schaalbaarheid.</p>
-              <span class="text-2xl font-bold text-white">€12,99/mnd</span>
-            </div>
-          </div>
-        </div>
-      </section>
+<canvas id="glitchMatrix" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;background:#010101;"></canvas>
 
-      <!-- Contact -->
-      <section id="contact" class="text-center px-6 py-24 bg-gray-900">
-        <div class="max-w-2xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-6">Contacteer Ons</h2>
-          <p class="text-gray-300 mb-4">Heb je vragen of hulp nodig?</p>
-          <p class="text-gray-400">Je kunt ons bereiken via <a href="mailto:support@cobalthosting.be" class="text-cyan-400 underline">support@cobalthosting.be</a> of via onze <a href="#" class="text-cyan-400 underline">Discord server</a>.</p>
-        </div>
-      </section>
-    </main>
+<script>
+  const canvas = document.getElementById("glitchMatrix");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
-    <Footer />
-  </body>
+  const letters = "01".split("");
+  const fontSize = 16;
+  const columns = canvas.width / fontSize;
+  const drops = Array.from({ length: columns }).fill(1);
+
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ff88";
+    ctx.font = fontSize + "px monospace";
+
+    drops.forEach((y, i) => {
+      const text = letters[Math.floor(Math.random() * letters.length)];
+      ctx.fillText(text, i * fontSize, y * fontSize);
+      drops[i] = y * fontSize > canvas.height && Math.random() > 0.975 ? 0 : y + 1;
+    });
+  }
+
+  setInterval(draw, 40);
+</script>
+
+<style>
+  .overlay::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      url('https://grainy-gradients.vercel.app/noise.svg'),
+      repeating-linear-gradient(to bottom, rgba(0, 255, 136, 0.03), transparent 3px);
+    background-size: cover;
+    opacity: 0.05;
+  }
+</style>
+
+<body class="overlay">
+
+</body>
+</html>
+
 </html>
