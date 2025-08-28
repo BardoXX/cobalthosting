@@ -1,0 +1,95 @@
+{
+  "home": {
+    "title": "Home",
+    "hero": {
+      "title": "Welcome to {brand}",
+      "subtitle": "Powerful hosting solutions for your business",
+      "ctaPrimary": "Get Started",
+      "ctaSecondary": "Learn More"
+    },
+    "features": {
+      "title": "Why {brand}",
+      "subtitle": "Our Benefits",
+      "items": [
+        {
+          "title": "Speed",
+          "description": "Lightspeed hosting for ultimate performance"
+        },
+        {
+          "title": "Reliability",
+          "description": "99.9% uptime guarantee"
+        },
+        {
+          "title": "Support",
+          "description": "24/7 expert support"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "What Our Customers Say",
+      "subtitle": "Experiences from satisfied customers"
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the perfect plan for your needs",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "price": "9.99",
+        "description": "Perfect for small websites"
+      },
+      "pro": {
+        "name": "Professional",
+        "price": "19.99",
+        "description": "Ideal for growing businesses",
+        "popular": true
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "49.99",
+        "description": "For large scale applications"
+      }
+    },
+    "features": {
+      "storage": "Storage",
+      "bandwidth": "Bandwidth",
+      "domains": "Domains",
+      "ssl": "Free SSL",
+      "support": "24/7 Support"
+    },
+    "cta": "Get Started"
+  },
+  "navigation": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "press": "Press"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "info@cobalthosting.be",
+      "phone": "+32 123 45 67 89",
+      "address": "Antwerp, Belgium"
+    }
+  },
+  "language": "Language",
+  "currency": "Currency"
+}

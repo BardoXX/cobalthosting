@@ -1,0 +1,118 @@
+{
+  "home": {
+    "title": "Home",
+    "hero": {
+      "title": "Welkom bij {brand}",
+      "subtitle": "Krachtige hostingoplossingen voor uw bedrijf",
+      "ctaPrimary": "Beginnen",
+      "ctaSecondary": "Meer informatie"
+    },
+    "features": {
+      "title": "Waarom {brand}",
+      "subtitle": "Onze voordelen",
+      "items": [
+        {
+          "title": "Snelheid",
+          "description": "Lightspeed hosting voor ultieme prestaties"
+        },
+        {
+          "title": "Betrouwbaarheid",
+          "description": "99,9% uptime garantie"
+        },
+        {
+          "title": "Ondersteuning",
+          "description": "24/7 deskundige ondersteuning"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Wat onze klanten zeggen",
+      "subtitle": "Ervaringen van tevreden klanten"
+    }
+  },
+  "pricing": {
+    "title": "Eenvoudige, transparante prijzen",
+    "subtitle": "Kies het perfecte abonnement voor uw behoeften",
+    "plans": {
+      "basic": {
+        "name": "Standaard",
+        "price": "9,99",
+        "description": "Perfect voor kleine websites"
+      },
+      "pro": {
+        "name": "Professioneel",
+        "price": "19,99",
+        "description": "Ideaal voor groeiende bedrijven",
+        "popular": true
+      },
+      "enterprise": {
+        "name": "Onderneming",
+        "price": "49,99",
+        "description": "Voor grote projecten"
+      }
+    },
+    "features": {
+      "storage": "Opslag",
+      "bandwidth": "Bandbreedte",
+      "domains": "Domeinen",
+      "ssl": "Gratis SSL",
+      "support": "Ondersteuning",
+      "email": "E-mail accounts"
+    }
+  },
+  "about": {
+    "title": "Over ons",
+    "subtitle": "Ons verhaal en onze missie",
+    "mission": {
+      "title": "Onze Missie",
+      "content": "Wij streven naar uitstekende hostingdiensten tegen eerlijke prijzen."
+    },
+    "team": {
+      "title": "Ons Team",
+      "subtitle": "Ontmoet de mensen achter {brand}"
+    },
+    "values": {
+      "title": "Onze Waarden",
+      "items": [
+        "Klanttevredenheid",
+        "Transparantie",
+        "Innovatie",
+        "Betrouwbaarheid"
+      ]
+    }
+  },
+  "common": {
+    "nav": {
+      "home": "Home",
+      "pricing": "Prijzen",
+      "about": "Over ons",
+      "login": "Inloggen",
+      "signup": "Registreren"
+    },
+    "cta": {
+      "getStarted": "Aan de slag",
+      "learnMore": "Meer informatie",
+      "contactUs": "Neem contact op"
+    },
+    "month": "per maand",
+    "mostPopular": "Meest populair",
+    "rights": "Alle rechten voorbehouden.",
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "notFound": {
+      "title": "Pagina niet gevonden",
+      "message": "De pagina die u zoekt bestaat niet of is verplaatst.",
+      "cta": "Terug naar home"
+    },
+    "footer": {
+      "company": "Bedrijf",
+      "legal": "Juridisch",
+      "resources": "Bronnen",
+      "contact": "Contact",
+      "copyright": "© {year} {brand}. Alle rechten voorbehouden.",
+      "social": {
+        "follow": "Volg ons"
+      }
+    }
+  }
+}
