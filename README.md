@@ -1,10 +1,12 @@
 # Cobalt Hosting
-our website
 
-links:
-[https://bardoxx.github.io/cobalthosting/](https://bardoxx.github.io/cobalthosting/)
+Welkom bij Cobalt Hosting!
 
-[https://www.cobalthosting.be/](https://www.cobalthosting.be/)
+🌐 **Onze websites:**
 
-Uptime:
-[https://status.cobalthosting.be/](https://status.cobalthosting.be/)
+* [GitHub Pagina](https://bardoxx.github.io/cobalthosting/)
+* [Hoofdwebsite](https://www.cobalthosting.be/)
+
+📊 **Status & Uptime:**
+
+* [status.cobalthosting.be](https://status.cobalthosting.be/)
