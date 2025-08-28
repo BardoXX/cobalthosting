@@ -5,6 +5,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -24,7 +25,12 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          echo "VITE_BASE_URL=/cobalthosting/" > .env.production
+          npm run build
+
+      - name: Add nojekyll file
+        run: touch ./dist/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -32,3 +38,6 @@ jobs:
           folder: dist
           branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
+          clean: true
+          single-commit: true
+          commit-message: 'Deploy to GitHub Pages'

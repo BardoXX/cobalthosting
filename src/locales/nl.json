@@ -1,4 +1,12 @@
 {
+  "site": {
+    "name": "Cobalt Hosting"
+  },
+  "nav": {
+    "home": "Home",
+    "pricing": "Prijzen",
+    "about": "Over ons"
+  },
   "home": {
     "title": "Home",
     "hero": {
@@ -105,14 +113,20 @@
       "cta": "Terug naar home"
     },
     "footer": {
+      "contactUs": "Neem contact op",
+      "support": "Ondersteuning",
+      "sales": "Verkoop",
+      "rights": "Alle rechten voorbehouden.",
       "company": "Bedrijf",
       "legal": "Juridisch",
-      "resources": "Bronnen",
       "contact": "Contact",
+      "terms": "Gebruiksvoorwaarden",
+      "cookies": "Cookiebeleid",
+      "email": "info@cobalthosting.be",
+      "phone": "+32 123 45 67 89",
+      "address": "Antwerpen, België",
       "copyright": "© {year} {brand}. Alle rechten voorbehouden.",
-      "social": {
-        "follow": "Volg ons"
-      }
+      "follow": "Volg ons"
     }
   }
 }

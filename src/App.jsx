@@ -1,8 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { ConfigProvider } from './context/ConfigContext';
-import PageRenderer from './components/PageRenderer';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { ConfigProvider, useConfig } from './context/ConfigContext';
 import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import PageRenderer from './components/PageRenderer';
 
 // In a real app, you would load this dynamically
 import { getConfig } from '../config/site.config';
@@ -49,16 +50,17 @@ const NotFound = () => {
 
 // Wrapper component to handle page rendering with Layout
 const PageWithLayout = ({ pageKey, siteName }) => {
-  const location = useLocation();
+  const { t } = useConfig();
   
-  // Scroll to top on route change
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
   return (
-    <Layout>
-      <PageRenderer pageKey={pageKey} siteName={siteName} />
+    <Layout siteName={siteName}>
+      <Suspense fallback={
+        <div className="min-h-[60vh] flex items-center justify-center">
+          <div className="animate-pulse">{t('common.loading', 'Loading...')}</div>
+        </div>
+      }>
+        <PageRenderer pageKey={pageKey} />
+      </Suspense>
     </Layout>
   );
 };
@@ -78,10 +80,9 @@ function App() {
           <Route 
             path="/home" 
             element={
-              <PageWithLayout 
-                pageKey="home"
-                siteName={siteName}
-              />
+              <Layout siteName={siteName}>
+                <HomePage />
+              </Layout>
             } 
           />
           <Route 

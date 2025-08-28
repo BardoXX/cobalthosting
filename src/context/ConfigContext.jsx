@@ -52,12 +52,15 @@ const ConfigProvider = ({ children, initialLocale, initialCurrency }) => {
   });
 
   // Use the i18n translation hook
-  const { t: i18nT, i18n } = useTranslation();
+  const { t: i18nT, i18n, ready } = useTranslation();
 
   // Change language when locale changes
   useEffect(() => {
-    i18n.changeLanguage(locale);
-  }, [locale, i18n]);
+    if (ready) {
+      i18n.changeLanguage(locale);
+      setIsLoading(false);
+    }
+  }, [locale, i18n, ready]);
 
   // Format currency value based on current currency
   const formatCurrency = (value) => {
@@ -72,18 +75,24 @@ const ConfigProvider = ({ children, initialLocale, initialCurrency }) => {
   };
 
   // Context value
-  const contextValue = {
+  const contextValue = React.useMemo(() => ({
     ...currentConfig,
     locale,
-    setLocale,
+    setLocale: (newLocale) => {
+      localStorage.setItem('preferredLocale', newLocale);
+      setLocale(newLocale);
+    },
     currency,
-    setCurrency,
+    setCurrency: (newCurrency) => {
+      localStorage.setItem('preferredCurrency', newCurrency);
+      setCurrency(newCurrency);
+    },
     formatCurrency,
     t,
     isLoading,
     error,
     getCurrentConfig,
-  };
+  }), [currentConfig, locale, currency, isLoading, error, t, formatCurrency, getCurrentConfig]);
 
   return (
     <ConfigContext.Provider value={contextValue}>

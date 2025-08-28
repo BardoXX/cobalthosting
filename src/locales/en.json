@@ -1,4 +1,17 @@
 {
+  "site": {
+    "name": "Cobalt Hosting"
+  },
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "about": "About"
+  },
+  "common": {
+    "nav": {
+      "login": "Login"
+    }
+  },
   "home": {
     "title": "Home",
     "hero": {
@@ -70,25 +83,18 @@
     "signup": "Sign Up"
   },
   "footer": {
-    "company": {
-      "title": "Company",
-      "about": "About Us",
-      "blog": "Blog",
-      "careers": "Careers",
-      "press": "Press"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "cookies": "Cookie Policy"
-    },
-    "contact": {
-      "title": "Contact",
-      "email": "info@cobalthosting.be",
-      "phone": "+32 123 45 67 89",
-      "address": "Antwerp, Belgium"
-    }
+    "contactUs": "Contact Us",
+    "support": "Support",
+    "sales": "Sales",
+    "rights": "All rights reserved.",
+    "company": "Company",
+    "legal": "Legal",
+    "contact": "Contact",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "email": "info@cobalthosting.be",
+    "phone": "+32 123 45 67 89",
+    "address": "Antwerp, Belgium"
   },
   "language": "Language",
   "currency": "Currency"
